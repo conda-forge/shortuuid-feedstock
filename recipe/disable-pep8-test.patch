@@ -1,5 +1,5 @@
---- shortuuid/tests.py	2014-04-18 19:00:18.000000000 +0200
-+++ shortuuid/tests.py	2018-10-10 19:31:17.460103444 +0200
+--- shortuuid/tests.py	2014-04-18 19:11:20.000000000 +0200
++++ shortuuid/tests.py	2018-10-10 19:38:13.100121923 +0200
 @@ -1,7 +1,6 @@
  import os
  import sys
@@ -8,7 +8,7 @@
  
  from uuid import UUID, uuid4
  
-@@ -94,16 +93,6 @@
+@@ -97,16 +96,6 @@
          self.assertRaises(ValueError, su1.set_alphabet, "1")
          self.assertRaises(ValueError, su1.set_alphabet, "1111111")
  
