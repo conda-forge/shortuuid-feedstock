@@ -1,6 +1,6 @@
 {% set name = "shortuuid" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "d08fd398f40f8baf87e15eef8355e92fa541bca4eb8465fefab7ee22f92711b9" %}
+{% set version = "0.5.1" %}
+{% set sha256 = "a70bed12ef8e61e7ca573ed8122227f2e0bc83aef87dedccffb5afaca912dda7" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
@@ -32,9 +32,9 @@ test:
 
 about:
   home: https://github.com/stochastic-technologies/shortuuid/
-  license: "BSD-3-Clause"
+  license: BSD-3-Clause
   license_file: COPYING
-  summary: 'A generator library for concise, unambiguous and URL-safe UUIDs'
+  summary: A generator library for concise, unambiguous and URL-safe UUIDs
   description: |
     A library that generates short, pretty, unambiguous unique IDs by using an
     extensive, case-sensitive alphabet and omitting similar-looking letters and
