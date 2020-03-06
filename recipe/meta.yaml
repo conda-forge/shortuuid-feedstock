@@ -1,6 +1,6 @@
 {% set name = "shortuuid" %}
-{% set version = "0.5.1" %}
-{% set sha256 = "a70bed12ef8e61e7ca573ed8122227f2e0bc83aef87dedccffb5afaca912dda7" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "3c11d2007b915c43bee3e10625f068d8a349e04f0d81f08f5fa08507427ebf1f" %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
 
 test:
   requires:
