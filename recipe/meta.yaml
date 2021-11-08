@@ -1,6 +1,6 @@
 {% set name = "shortuuid" %}
-{% set version = "1.0.2" %}
-{% set sha256 = "609e79f0049f45166b2abda17ab59f1009ee32f31daa157c68bf6956d2ac7e2a" %}
+{% set version = "1.0.4" %}
+{% set sha256 = "d59613cc63866c7fc861a5873b25c60a2c8d886850322fe0a8bfbfc03118fbc3" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   skip: true  # [py<35]
 
