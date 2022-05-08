@@ -1,6 +1,6 @@
 {% set name = "shortuuid" %}
-{% set version = "1.0.8" %}
-{% set sha256 = "9435e87e5a64f3b92f7110c81f989a3b7bdb9358e22d2359829167da476cfc23" %}
+{% set version = "1.0.9" %}
+{% set sha256 = "459f12fa1acc34ff213b1371467c0325169645a31ed989e268872339af7563d5" %}
 
 package:
   name: {{ name|lower }}
