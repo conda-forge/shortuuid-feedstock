@@ -11,10 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
-  skip: true  # [py<35]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  number: 1
 
 requirements:
   build:
@@ -22,11 +21,11 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - poetry
   host:
-    - python
+    - python >=3.6
     - pip
     - poetry
   run:
-    - python
+    - python >=3.6
 
 test:
   requires:
