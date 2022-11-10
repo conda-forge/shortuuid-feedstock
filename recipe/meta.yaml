@@ -1,6 +1,6 @@
 {% set name = "shortuuid" %}
-{% set version = "1.0.9" %}
-{% set sha256 = "459f12fa1acc34ff213b1371467c0325169645a31ed989e268872339af7563d5" %}
+{% set version = "1.0.10" %}
+{% set sha256 = "666e1e8a47379b3626ec40da17d3635212ea232b4647e808ea46d1c4b0be156e" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-  number: 1
+  number: 0
 
 requirements:
   build:
