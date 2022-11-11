@@ -1,7 +1,7 @@
 About shortuuid
 ===============
 
-Home: https://github.com/stochastic-technologies/shortuuid/
+Home: https://github.com/skorokithakis/shortuuid
 
 Package license: BSD-3-Clause
 
