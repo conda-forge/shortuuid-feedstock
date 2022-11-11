@@ -33,7 +33,7 @@ test:
   imports:
     - shortuuid
   commands:
-    - python -m unittest shortuuid.tests
+    - python -m unittest shortuuid.test_shortuuid
 
 about:
   home: https://github.com/stochastic-technologies/shortuuid/
