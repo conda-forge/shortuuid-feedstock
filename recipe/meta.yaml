@@ -1,42 +1,44 @@
-{% set name = "shortuuid" %}
 {% set version = "1.0.10" %}
-{% set sha256 = "666e1e8a47379b3626ec40da17d3635212ea232b4647e808ea46d1c4b0be156e" %}
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: shortuuid
+  version: 666e1e8a47379b3626ec40da17d3635212ea232b4647e808ea46d1c4b0be156e
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/s/shortuuid/shortuuid-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-  number: 0
+  script:
+    # TODO: remove after https://github.com/skorokithakis/shortuuid/pull/90
+    - {{ PYTHON }} -c "__import__('pathlib').Path('shortuuid/py.typed').touch()"
+    - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  number: 1
+  entry_points:
+    - shortuuid = shortuuid.cli:cli
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - poetry
   host:
-    - python >=3.6
     - pip
-    - poetry
+    - poetry-core
+    - python >=3.6
   run:
     - python >=3.6
 
 test:
   requires:
     - pep8
+    - pip
   imports:
     - shortuuid
   commands:
+    - pip check
+    - shortuuid --help
     - python -m unittest shortuuid.test_shortuuid
 
 about:
-  home: https://github.com/stochastic-technologies/shortuuid/
+  home: https://github.com/skorokithakis/shortuuid
   license: BSD-3-Clause
   license_file: COPYING
   summary: A generator library for concise, unambiguous and URL-safe UUIDs
