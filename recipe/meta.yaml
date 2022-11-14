@@ -1,4 +1,4 @@
-{% set version = "1.0.10" %}
+{% set version = "1.0.11" %}
 
 package:
   name: shortuuid
@@ -6,15 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/shortuuid/shortuuid-{{ version }}.tar.gz
-  sha256: 666e1e8a47379b3626ec40da17d3635212ea232b4647e808ea46d1c4b0be156e
+  sha256: fc75f2615914815a8e4cb1501b3a513745cb66ef0fd5fc6fb9f8c3fa3481f789
 
 build:
   noarch: python
-  script:
-    # TODO: remove after https://github.com/skorokithakis/shortuuid/pull/90
-    - {{ PYTHON }} -c "__import__('pathlib').Path('shortuuid/py.typed').touch()"
-    - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  number: 0
   entry_points:
     - shortuuid = shortuuid.cli:cli
 
