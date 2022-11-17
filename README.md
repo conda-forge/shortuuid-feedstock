@@ -149,4 +149,5 @@ Feedstock Maintainers
 =====================
 
 * [@astamminger](https://github.com/astamminger/)
+* [@bollwyvl](https://github.com/bollwyvl/)
 
