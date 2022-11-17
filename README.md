@@ -1,7 +1,7 @@
 About shortuuid
 ===============
 
-Home: https://github.com/stochastic-technologies/shortuuid/
+Home: https://github.com/skorokithakis/shortuuid
 
 Package license: BSD-3-Clause
 
@@ -149,4 +149,5 @@ Feedstock Maintainers
 =====================
 
 * [@astamminger](https://github.com/astamminger/)
+* [@bollwyvl](https://github.com/bollwyvl/)
 
