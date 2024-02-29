@@ -1,4 +1,4 @@
-{% set version = "1.0.11" %}
+{% set version = "1.0.12" %}
 
 package:
   name: shortuuid
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/shortuuid/shortuuid-{{ version }}.tar.gz
-  sha256: fc75f2615914815a8e4cb1501b3a513745cb66ef0fd5fc6fb9f8c3fa3481f789
+  sha256: c39f1b348b3c1e9b115a954b33b76c8c522d2d177a9d20acdbb20d24fac3ccfd
 
 build:
   noarch: python
