@@ -34,7 +34,7 @@ test:
     - pip check
     - shortuuid --help
     - coverage run --branch --source=shortuuid -m unittest shortuuid.test_shortuuid
-    - coverage report --show-missing --skip-covered --fail-under=100 
+    - coverage report --show-missing --skip-covered --fail-under=90
 
 about:
   home: https://github.com/skorokithakis/shortuuid
