@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/shortuuid/shortuuid-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/shortuuid/shortuuid-{{ version }}.tar.gz
   sha256: 3bb9cf07f606260584b1df46399c0b87dd84773e7b25912b7e391e30797c5e72
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   entry_points:
     - shortuuid = shortuuid.cli:cli
 
@@ -19,15 +19,16 @@ requirements:
   host:
     - pip
     - poetry-core
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   requires:
     - coverage
     - pep8
     - pip
+    - python {{ python_min }}
   imports:
     - shortuuid
   commands:
